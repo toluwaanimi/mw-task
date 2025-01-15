@@ -38,4 +38,14 @@ export const CACHE_KEYS = {
   PROVIDER_HEALTH: env.get('CACHE_KEY_PROVIDER_HEALTH').default('provider:health:').asString(),
   LEADER_LOCK: env.get('CACHE_KEY_LEADER_LOCK').default('leader:lock').asString(),
   PROVIDER_STATS: env.get('CACHE_KEY_PROVIDER_STATS').default('provider:stats:').asString(),
+} as const;
+
+// Provider configuration
+export const PROVIDER_CONFIG = {
+  SUPER_CAR_BASE_URL: env.get('SUPER_CAR_BASE_URL')
+    .required()
+    .asString(),
+  PREMIUM_CAR_BASE_URL: env.get('PREMIUM_CAR_BASE_URL')
+    .required()
+    .asString(),
 } as const; 

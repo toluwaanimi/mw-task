@@ -6,11 +6,11 @@ import {
   ValuationResponse,
   ValuationRequest,
 } from '@app/providers';
+import { PROVIDER_CONFIG } from '@app/config/env.config';
 
 export class PremiumValuationsProvider implements Provider {
   name = 'Premium Car';
-  private baseUrl =
-    'https://run.mocky.io/v3/7d101be3-f162-4459-8a72-0da642e33d9f';
+  private baseUrl = PROVIDER_CONFIG.PREMIUM_CAR_BASE_URL;
   private parser = new XMLParser({
     ignoreAttributes: true,
     parseTagValue: true,

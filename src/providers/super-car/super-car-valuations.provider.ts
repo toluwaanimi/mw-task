@@ -5,12 +5,12 @@ import {
   SuperCarValuationResponse,
   SuperCarValuationTransformer,
 } from '@app/providers';
+import { PROVIDER_CONFIG } from '@app/config/env.config';
 import axios from 'axios';
 
 export class SuperCarValuationsProvider implements Provider {
   name = 'SuperCar';
-  private baseUrl =
-    'https://run.mocky.io/v3/9686820f-fb97-4736-a094-eff20dd2dd87';
+  private baseUrl = PROVIDER_CONFIG.SUPER_CAR_BASE_URL;
 
   getRequestUrl(vrm: string, mileage: number): string {
     return `${this.baseUrl}/valuations/${vrm}?mileage=${mileage}`;
