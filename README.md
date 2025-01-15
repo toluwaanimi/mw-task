@@ -183,7 +183,29 @@ Here is a place for you to put any notes regarding the changes you made and the 
 ### **Code Quality & Maintainability**
 - Add **OpenAPI/Swagger documentation** for improved API discoverability and easier integration.
 - Use **dependency injection** to improve modularity and testability of the system.
+
+### **Provider Registration & Configuration with Fallback Mechanism**
+- Implement fallback based on priority, as there may be more than one fallback provider.
+- Create a better way to register multiple providers and disable some by default from the configuration using an active boolean.
+
+```typescript
+
+export interface Provider {
+  name: string;
+  getValuation(request: ValuationRequest): Promise<ValuationResponse>;
+  getRequestUrl(vrm: string, mileage: number): string;
+}
+
+export interface ProviderConfig {
+  name: string;
+  priority: number;
+  active: boolean;
+  provider: Provider;
+}
+
+```
 ---
+
 
 ## **Key Takeaways**
 These improvements aim to significantly enhance the **reliability, maintainability**, and **performance** of the system, ensuring it can scale efficiently in production environments. Implementing these changes will also contribute to better **monitoring**, **security**, and **observability**, making the system more robust and ready for a variety of operational challenges.
