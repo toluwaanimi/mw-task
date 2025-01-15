@@ -5,7 +5,7 @@ import {
   SuperCarValuationResponse,
   SuperCarValuationTransformer,
 } from '@app/providers';
-import { PROVIDER_CONFIG } from '@app/config/env.config';
+import { PROVIDER_CONFIG } from '@app/config';
 import axios from 'axios';
 
 export class SuperCarValuationsProvider implements Provider {

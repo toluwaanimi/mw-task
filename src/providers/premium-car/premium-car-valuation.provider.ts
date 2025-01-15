@@ -6,7 +6,7 @@ import {
   ValuationResponse,
   ValuationRequest,
 } from '@app/providers';
-import { PROVIDER_CONFIG } from '@app/config/env.config';
+import { PROVIDER_CONFIG } from '@app/config';
 
 export class PremiumValuationsProvider implements Provider {
   name = 'Premium Car';
