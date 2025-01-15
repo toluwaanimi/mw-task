@@ -11,7 +11,4 @@ export const getDbConfig = (isTest = false) => ({
 });
 
 const isTest = SERVER_CONFIG.NODE_ENV === 'test' || Boolean(process.env.VITEST);
-const AppDataSource = new DataSource(getDbConfig(false));
-const TestDataSource = new DataSource(getDbConfig(true));
-
-export const dataSource = isTest ? TestDataSource : AppDataSource;
+export const dataSource = new DataSource(getDbConfig(isTest));
