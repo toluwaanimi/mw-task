@@ -10,5 +10,6 @@ export const getDbConfig = (isTest = false) => ({
   entities: [VehicleValuation, ProviderLog],
 });
 
+
 const isTest = SERVER_CONFIG.NODE_ENV === 'test' || Boolean(process.env.VITEST);
 export const dataSource = new DataSource(getDbConfig(isTest));
