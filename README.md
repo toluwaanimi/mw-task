@@ -179,6 +179,10 @@ Here is a place for you to put any notes regarding the changes you made and the 
 - Implement **API key authentication** to enhance security and prevent unauthorized access.
 - Implement **rate limiting per client** to prevent misuse and ensure fair usage of the service.
 
+
+### **Database**
+- Provide support for database migrations to allow for easy updates to the database schema.
+
 ### **Code Quality & Maintainability**
 - Add **OpenAPI/Swagger documentation** for improved API discoverability and easier integration.
 - Use **dependency injection** to improve modularity and testability of the system.
@@ -186,6 +190,8 @@ Here is a place for you to put any notes regarding the changes you made and the 
 ### **Provider Registration & Configuration with Fallback Mechanism**
 - Implement fallback based on priority, as there may be more than one fallback provider.
 - Create a better way to register multiple providers and disable some by default from the configuration using an active boolean.
+
+
 
 ```typescript
 
