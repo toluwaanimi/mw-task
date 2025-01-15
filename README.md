@@ -168,7 +168,6 @@ Here is a place for you to put any notes regarding the changes you made and the 
 ## **Future Improvements**
 
 ### **Performance Optimizations**
-- Implement **request batching** for handling multiple valuation requests in a single operation, improving throughput and reducing overhead.
 - **Rate limiting per provider** to prevent overwhelming the providers and ensure fair usage.
 
 ### **Monitoring & Observability**
@@ -177,7 +176,7 @@ Here is a place for you to put any notes regarding the changes you made and the 
 - Set up **alerting** for sustained provider failures to proactively address issues.
 
 ### **Security Enhancements**
-- Implement **API key ** for providers to enhance security and prevent unauthorized access.
+- Implement **API key authentication** to enhance security and prevent unauthorized access.
 - Implement **rate limiting per client** to prevent misuse and ensure fair usage of the service.
 
 ### **Code Quality & Maintainability**
